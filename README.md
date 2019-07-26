@@ -23,4 +23,4 @@ pipenv run python soln.py fz.json
 - [ ] method decorators
     - [ ] properties
     - [ ] other decorators
-- [x] super() style calls
+- [ ] super() style calls
