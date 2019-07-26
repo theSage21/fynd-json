@@ -34,6 +34,7 @@
         },
         "sold_units": {
             "type": "attribute",
+            "annotation": "float",
             "value": 10
         }
     }
