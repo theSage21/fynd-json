@@ -1,0 +1,40 @@
+{
+    "docstring": "Yamaha FZ",
+    "bases": [
+        "bike"
+    ],
+    "namespace": {
+        "__init__": {
+            "type": "method",
+            "args": [
+                {
+                    "name": "self"
+                },
+                {
+                    "name": "nickname",
+                    "default": "FZ"
+                }
+            ],
+            "kwargs": [
+                {
+                    "name": "distance",
+                    "default": 0,
+                    "annotation": "int"
+                },
+                {
+                    "name": "fuel",
+                    "default": 0.0,
+                    "annotation": "float"
+                },
+                {
+                    "name": "**kwargs"
+                }
+            ],
+            "body": "super(fz, self).__init__(**kwargs)\nself.nickname=nickname\nself.distance=distance\nself.fuel=fuel\nself.x={1:2}"
+        },
+        "sold_units": {
+            "type": "attribute",
+            "value": 10
+        }
+    }
+}

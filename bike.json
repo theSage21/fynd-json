@@ -1,0 +1,26 @@
+{
+    "namespace": {
+        "__init__": {
+            "type": "method",
+            "args": [
+                {
+                    "name": "self"
+                },
+                {
+                    "name": "cc",
+                    "annotation": "float"
+                }
+            ],
+            "body": "self.cc = cc"
+        },
+        "__repr__": {
+            "type": "method",
+            "args": [
+                {
+                    "name": "self"
+                }
+            ],
+            "body": "return str(self.__dict__)"
+        }
+    }
+}
