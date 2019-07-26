@@ -9,6 +9,9 @@
                 {
                     "name": "cc",
                     "annotation": "float"
+                },
+                {
+                    "name": "*args"
                 }
             ],
             "body": "self.cc = cc"
