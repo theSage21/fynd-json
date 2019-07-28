@@ -1,8 +1,19 @@
 # Fynd-Json-Classes
 
+## From cli/Test a basic set of features
 ```bash
 pipenv run python soln.py fz.json
 ```
+
+## In python code
+
+```python
+from soln import read_class
+
+fz = read_class('fz')
+my_bike = fz(cc=150)
+```
+
 
 ## Basic Class Set
 
