@@ -15,6 +15,7 @@ pipenv run python soln.py fz.json
     - [x] docstrings
     - [x] super(class,self) style calls
 - [x] inheritence
+- [x] slots
 
 ## Full fledged class set
 
@@ -24,3 +25,24 @@ pipenv run python soln.py fz.json
     - [ ] properties
     - [ ] other decorators
 - [ ] super() style calls
+
+## Extended instructions to run
+
+```
+sudo apt-get update
+sudo apt-get install python-pip git python-dev
+curl https://pyenv.run | bash
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+# Restart the shell
+pyenv update
+pip install pipenv --user
+git clone https://github.com/theSage21/fynd-json
+cd fynd-json
+pipenv install --dev --deploy
+
+
+
+pipenv run python soln.py fz.json
+```

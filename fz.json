@@ -4,6 +4,9 @@
         "bike"
     ],
     "namespace": {
+        "__slots__": {"type": "attribute",
+            "value": ["nickname", "distance", "x", "fuel"]
+            },
         "__init__": {
             "type": "method",
             "args": [

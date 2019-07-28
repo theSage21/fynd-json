@@ -2,10 +2,13 @@ import json
 import os
 
 # These "classes" are available as JSON
-available = [a.rstrip(".json") for a in os.listdir(".")]
 
 
 def make_annotation(arg):
+    """
+    Given json representation of an argument, returns the annotations for it.
+    Placeholder to inject more complex annotation systems in the future
+    """
     # we could evaluate annotation strings to classes?
     assert isinstance(arg["annotation"], str), f"{arg} annotations can only be strings"
     anno = arg["annotation"]
@@ -15,6 +18,9 @@ def make_annotation(arg):
 
 
 def check_arg(arg, kind):
+    """
+    Makes sure that arguments are of the correct kind and have correct names
+    """
     assert isinstance(arg["name"], str), f"{arg} has to be of type string"
     if kind == "kwargs":
         assert (
@@ -56,7 +62,13 @@ def make_function(name, dkt, indent="  "):
     return code
 
 
-def ensure_bases(bases):
+def ensure_bases(bases, available=[a.rstrip(".json") for a in os.listdir(".")]):
+    """
+    Makes sure that the bases exist in order for some class to inherit from them.
+    You can pass in a custom available list to control which bases are available.
+
+    Default picks up all *.json files in the currect directory
+    """
     assert isinstance(bases, (tuple, list))
     assert all([isinstance(base, str) for base in bases]), "all bases must be strings"
     base_classes = {}
@@ -68,7 +80,9 @@ def ensure_bases(bases):
 
 
 def read_class(name):
-    "Reads a spec with the given name and generates a class object for it"
+    """
+    Reads a spec with the given name and generates a class object for it
+    """
     assert os.path.exists(
         f"{name}.json"
     ), f"{name}.json is not in the current directory"
